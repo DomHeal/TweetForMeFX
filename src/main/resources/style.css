@@ -1,0 +1,21 @@
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 0.5 0 0.5;
+    -fx-background-color: #424242;
+}
+
+.homeImage:hover{
+    -fx-border-image-source: url("guy.jpg");
+}
+
+.separator:horizontal.line {
+    -fx-padding: 0 0.5 0 0.5;
+    -fx-background-color: #424242;
+}
+
+.separator *.line {
+    -fx-padding: 0 0.5 0 0.5;
+    -fx-background-color: #424242;
+    -fx-pref-width: 100%;
+    -fx-opacity: 0.3;
+
+}
