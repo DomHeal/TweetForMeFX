@@ -4,7 +4,7 @@
 }
 
 .homeImage:hover{
-    -fx-border-image-source: url("guy.jpg");
+    -fx-border-image-source: url("images/guy.jpg");
 }
 
 .separator:horizontal.line {

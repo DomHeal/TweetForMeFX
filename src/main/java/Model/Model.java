@@ -1,6 +1,5 @@
-package Initial;
+package Model;
 
-import javafx.stage.FileChooser;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -50,12 +49,6 @@ public class Model {
         System.out.println("Successfully updated the status to [" + status.getText() + "].");
     }
 
-    public void readFile() throws FileNotFoundException {
-        FileReader fileReader = new FileReader("");
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-
-    }
 
 
 }

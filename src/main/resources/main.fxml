@@ -11,45 +11,45 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.15654205607476634" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="430.0" style="-fx-background-color: #2C2C2C;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Initial.Controller">
+<SplitPane dividerPositions="0.15654205607476634" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="430.0" style="-fx-background-color: #2C2C2C;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <items>
       <VBox fx:id="menu" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="51.0" spacing="15.0">
          <children>
-            <ImageView id="homeImage" fx:id="homeImage" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="homeImage" fx:id="homeView" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ic_action_mdpi_home.png" />
+                  <Image url="@images/home.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="writeView" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ic_action_mdpi_write_new.png" />
+                  <Image url="@images/write.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="messageView" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="messageView" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#x" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ic_action_mdpi_message.png" />
+                  <Image url="@images/message.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="uploadView" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#openFile" onMousePressed="#openFile" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ic_action_mdpi_upload_file.png" />
+                  <Image url="@images/upload.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settingView" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ic_action_mdpi_bulleted_list.png" />
+                  <Image url="@images/bulleted_list.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -101,7 +101,7 @@
                         <Rectangle2D />
                      </viewport>
                      <image>
-                        <Image url="@guy.jpg" />
+                        <Image url="@images/guy.jpg" />
                      </image>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -127,7 +127,10 @@
                               <Font name="HelveticaNeue Medium" size="12.0" />
                            </font>
                         </Label>
-                        <Label text="300k" textFill="WHITE" />
+                        <Label text="300k" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
                         <Label text="following" textFill="WHITE">
                            <font>
                               <Font name="HelveticaNeue Medium" size="12.0" />
@@ -168,7 +171,7 @@
                      <children>
                         <ImageView fx:id="tweetImage1" fitHeight="60.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <image>
-                              <Image url="@guy.jpg" />
+                              <Image url="@images/guy.jpg" />
                            </image>
                         </ImageView>
                         <VBox prefHeight="50.0" prefWidth="208.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -211,12 +214,12 @@
                                  <graphic>
                                     <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@retweet-action-on.png" />
+                                          <Image url="@images/retweet-action-on.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </Label>
                               <Label text="120" textFill="#e81c4f">
@@ -226,7 +229,7 @@
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@like-action-on.png" />
+                                          <Image url="@images/like-action-on.png" />
                                        </image>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
@@ -234,12 +237,12 @@
                                     </ImageView>
                                  </graphic>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </Label>
                               <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@delete-xxl.png" />
+                                    <Image url="@images/delete-xxl.png" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
@@ -265,7 +268,7 @@
                      <children>
                         <ImageView fx:id="tweetImage2" fitHeight="60.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <image>
-                              <Image url="@guy.jpg" />
+                              <Image url="@images/guy.jpg" />
                            </image>
                         </ImageView>
                         <VBox prefHeight="50.0" prefWidth="208.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -308,12 +311,12 @@
                                  <graphic>
                                     <ImageView fitHeight="20.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@retweet-action-on.png" />
+                                          <Image url="@images/retweet-action-on.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </Label>
                               <Label text="200" textFill="#e81c4f">
@@ -323,7 +326,7 @@
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@like-action-on.png" />
+                                          <Image url="@images/like-action-on.png" />
                                        </image>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
@@ -331,12 +334,12 @@
                                     </ImageView>
                                  </graphic>
                                  <cursor>
-                                    <Cursor fx:constant="HAND" />
+                                    <Cursor fx:constant="TEXT" />
                                  </cursor>
                               </Label>
                               <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@delete-xxl.png" />
+                                    <Image url="@images/delete-xxl.png" />
                                  </image>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
